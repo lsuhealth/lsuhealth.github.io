@@ -1,0 +1,19 @@
+title: COPES
+description: AI-powered virtual reality for scalable clinical training.
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+timezone: America/Chicago
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

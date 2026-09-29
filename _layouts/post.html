@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-hero">
+    <div class="shell narrow">
+      <p class="eyebrow eyebrow-light">COPES Blog</p>
+      <h1>{{ page.title }}</h1>
+      <div class="post-meta">
+        <span><i class="fa-regular fa-calendar" aria-hidden="true"></i> {{ page.date | date: "%B %-d, %Y" }}</span>
+        {% if page.author %}<span><i class="fa-regular fa-user" aria-hidden="true"></i> {{ page.author }}</span>{% endif %}
+        {% if page.category %}<span><i class="fa-solid fa-tag" aria-hidden="true"></i> {{ page.category }}</span>{% endif %}
+      </div>
+      {% if page.excerpt_text %}
+      <p class="lede">{{ page.excerpt_text }}</p>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="shell narrow prose">
+    {{ content }}
+  </div>
+
+  <div class="shell narrow post-footer">
+    <a class="text-link" href="{{ '/blog/' | relative_url }}"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to all posts</a>
+  </div>
+</article>
